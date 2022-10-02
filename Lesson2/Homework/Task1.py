@@ -2,6 +2,7 @@
 # Пример: 6782 -> 23; 0,56 -> 11
 
 def sumOfNums(n):
+    n = abs(n)
     if n % 1 != 0:
         while n % 1 != 0:
             n *= 10
