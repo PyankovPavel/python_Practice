@@ -1,11 +1,28 @@
 # Задайте список. Напишите программу, которая определит, присутствует ли в заданном списке строк некое число.
 
 
-list = []
+num = input('Input number to find: ')
 
-list = {'priv455', 'ggghhh2225', 'kkkddgg456'}
 
-num = (input('Input number '))
+def fill_list():
+    print('Add some strings to list. Blank line will stop filling the list.')
+    list = []
+    while True:
+        my_string = input()
+        if my_string == '':
+            break
+        else:
+            list.append(my_string)
+    print(list)
+    return list
 
-for i in range(len(list)):
-    newList = []
+
+def find_num_in_list(n, some_list):
+    for i in range(len(some_list)):
+        if n in some_list[i]:
+            print(f'{n} in {i + 1}th element of the list')
+        else:
+            print('No matches')
+
+
+find_num_in_list(num, fill_list())
