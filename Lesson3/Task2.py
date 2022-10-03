@@ -12,15 +12,15 @@ list = ["qwe", "asd", "zxc", "qwe", "ertqwe"]
 
 str = input("Введите строку для поиска: ")
 
-listOsIndex = []
+listOfIndex = []
 count = 0
 
 for i in range(len(list)):
     if list[i] == str:
-        listOsIndex.append(i)
+        listOfIndex.append(i)
 
-if len(listOsIndex) > 1:
-    print(f"Второе вхождение {str} на позиции индекс {listOsIndex[1]}")
+if len(listOfIndex) > 1:
+    print(f"Второе вхождение {str} на позиции индекс {listOfIndex[1]}")
 else:
      print("нет второго вхождения")
 
