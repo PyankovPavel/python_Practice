@@ -1,0 +1,6 @@
+*********************************************************************
+Small basic rules before you start:
+1. First player sets by draw, it's random.
+2. You can't take more than 28 sweets
+3. The last one who takes all the sweets from the table is the Winner!
+**********************************************************************
