@@ -143,11 +143,10 @@ def game_with_ai(n):
 
 
 def select_play():
-    num = int(input('Press 1 to play with another human and any number to play with bot: '))
-    if num == 1:
+    num = input('Press 1 to play with another human or any symbol to play with bot: ')
+    if num == '1':
         game_with_human(sweets)
     else:
         game_with_ai(sweets)
-
 
 select_play()
