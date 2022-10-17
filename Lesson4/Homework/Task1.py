@@ -8,6 +8,7 @@ def accuracy(n):
     lst = [0.1]
     for i in range(10):
         lst.append(lst[i] / 10)
+    print(lst)
     while True:
         acc_rate = float(input('Input required accuracy from 0.1 до 0.0000000001: '))
         if acc_rate not in lst:

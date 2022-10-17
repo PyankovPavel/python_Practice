@@ -19,4 +19,5 @@ def find_singles_in_seq(n):
             if lst[i] != lst[i - 1]:
                 print(lst[i])
 
+
 find_singles_in_seq(num)

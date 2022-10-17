@@ -17,7 +17,10 @@ def sumOfNums(n):
     return sum
 
 
+
 print(sumOfNums(6782))
 print(sumOfNums(0.56))
 print(sumOfNums(198.45))
 print(sumOfNums(0.67))
+
+
