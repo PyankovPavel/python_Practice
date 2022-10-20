@@ -7,4 +7,4 @@ def error_value():
     return print('Ошибка ввода данных')
 
 def print_total():
-    return print(f'Результат: { model.total}')
+    return print(f'Результат: {model.total}')

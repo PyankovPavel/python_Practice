@@ -1,5 +1,11 @@
+import model
+import view
+import logger
+
+
 def start_eq():
     string = input('Введите выражение: ')
+    orig_string = string
 
     opSelect = {
         "*": lambda x, y: int(x) * int(y),
@@ -24,7 +30,7 @@ def start_eq():
             deleteElement(string, i)
             return True
 
-    example = ''.join(string)
+    model.total = ''.join(string)
 
     while len(string) > 1:
         if '*' in string or '/' in string:
@@ -37,4 +43,6 @@ def start_eq():
                 if operation(string, i, '+'): break
                 if operation(string, i, '-'): break
 
-    print(f'{example}={string[0]}')
+    model.total = string[0]
+    view.print_total()
+    logger.logger(f'{orig_string} = {model.total}')
