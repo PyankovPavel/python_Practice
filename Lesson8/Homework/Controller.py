@@ -133,9 +133,9 @@ def find_contact():
                 else:
                     main_menu()
         case 3:
-            surname = input(f'Введите искомый телефон: ') + ';'
+            number = input(f'Введите искомый телефон, формат 79213214567: ') + ';'
             for i in range(len(Model.phonebook)):
-                if Model.phonebook[i].__contains__(surname.lower()):
+                if Model.phonebook[i].__contains__(number):
                     print(Model.phonebook[i])
                     flag = True
             if not flag:
