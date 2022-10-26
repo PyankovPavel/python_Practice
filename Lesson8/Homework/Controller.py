@@ -94,53 +94,16 @@ def show_unsaved_contacts():
 def find_contact():
     open_file()
     select = int(input('По какому параметру будем искать? (0-имя, 1-отчество, 2-фамилия, 3-телефон): '))
-    flag = False
     match select:
         case 0:
             name = input(f'Введите искомое имя: ') + ';'
-            for i in range(len(Model.phonebook)):
-                if Model.phonebook[i].__contains__(name.lower()):
-                    print(Model.phonebook[i])
-                    flag = True
-            if not flag:
-                inner_select = input('Данные не найдены. 1 - повторить поиск, иначе Главное меню')
-                if inner_select == '1':
-                    find_contact()
-                else:
-                    main_menu()
+            View.view_of_search(name)
         case 1:
             middle_name = input(f'Введите искомое отчество: ') + ';'
-            for i in range(len(Model.phonebook)):
-                if Model.phonebook[i].__contains__(middle_name.lower()):
-                    print(Model.phonebook[i])
-                    flag = True
-            if not flag:
-                inner_select = input('Данные не найдены. 1 - повторить поиск, иначе Главное меню')
-                if inner_select == '1':
-                    find_contact()
-                else:
-                    main_menu()
+            View.view_of_search(middle_name)
         case 2:
             surname = input(f'Введите искомую фамилию: ') + ';'
-            for i in range(len(Model.phonebook)):
-                if Model.phonebook[i].__contains__(surname.lower()):
-                    print(Model.phonebook[i])
-                    flag = True
-            if not flag:
-                inner_select = input('Данные не найдены. 1 - повторить поиск, иначе Главное меню')
-                if inner_select == '1':
-                    find_contact()
-                else:
-                    main_menu()
+            View.view_of_search(surname)
         case 3:
             number = input(f'Введите искомый телефон, формат 79213214567: ') + ';'
-            for i in range(len(Model.phonebook)):
-                if Model.phonebook[i].__contains__(number):
-                    print(Model.phonebook[i])
-                    flag = True
-            if not flag:
-                inner_select = input('Данные не найдены. 1 - повторить поиск, иначе Главное меню')
-                if inner_select == '1':
-                    find_contact()
-                else:
-                    main_menu()
+            View.view_of_search(number)
