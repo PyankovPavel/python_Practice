@@ -2,43 +2,8 @@ import Model
 import View
 
 
-def main_menu():
-    while True:
-        print('\nГлавное меню:')
-        print('0. Открыть файл с контактами')
-        print('1. Добавить контакт')
-        print('2. Удалить контакт')
-        print('3. Изменить контакт')
-        print('4. Показать все контакты, в т.ч. несохраненные')
-        print('6. Поиск по контактам')
-        print('8. Сохранить файл')
-        print('9. Закрыть программу')
-        select = int(input('Выберите пункт: '))
-        match select:
-            case 0:
-                open_file()
-                View.view_of_phonebook()
-            case 1:
-                add_contact()
-                print('\nКонтакт добавлен\n')
-            case 2:
-                remove_contact()
-                print('\nКонтакт удален\n')
-            case 3:
-                change_contact()
-            case 4:
-                show_unsaved_contacts()
-            case 6:
-                find_contact()
-            case 8:
-                save_file()
-                print('\nФайл сохранен!\n')
-            case 9:
-                exit()
-
-
 def start_app():
-    main_menu()
+    View.main_menu()
 
 
 def open_file():
@@ -64,7 +29,7 @@ def add_contact():
     if save_select == '1' or save_select == 'Y'.lower():
         save_file()
     else:
-        main_menu()
+        View.main_menu()
 
 
 def remove_contact():
